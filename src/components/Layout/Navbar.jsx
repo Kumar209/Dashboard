@@ -8,7 +8,7 @@ import { BiFile } from "react-icons/bi";
 import { MdOutlineAssignment } from "react-icons/md";
 import { FaGraduationCap, FaBars } from "react-icons/fa";
 import Dashboard from "../Dashboard/Dashboard";
-
+import LessonPlan from "../Lesson/LessonPlan.jsx";
 
 const Navbar = () => {
   const [active, setActive] = useState(1);
@@ -25,12 +25,18 @@ const Navbar = () => {
         </div>
 
         <div className="flex">
-          <FaBars size={25} className="absolute top-7 left-5 cursor-pointer" onClick={() => setOpen(!open)}/>
+          <FaBars
+            size={25}
+            className="absolute top-7 left-5 cursor-pointer"
+            onClick={() => setOpen(!open)}
+          />
         </div>
 
-
-
-        <div className={`${open? "block" : "hidden"} bg-[#071b63] flex flex-col items-center w-full pt-10 pl-20`}>
+        <div
+          className={`${
+            open ? "block" : "hidden"
+          } bg-[#071b63] flex flex-col items-center w-full pt-10 pl-20`}
+        >
           <div className="flex items-center justify-start cursor-pointer w-full mb-6">
             <CgTikcode
               size={22}
@@ -49,7 +55,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center justify-start cursor-pointer w-full mb-6">
-            <IoBookSharp
+            <BiFile
               size={22}
               className={`mr-2 mt-1 ${
                 active === 2 ? "text-[white]" : "text-[#C4C4C4]"
@@ -61,7 +67,7 @@ const Navbar = () => {
               }`}
               onClick={() => setActive(2)}
             >
-              Classes
+              Lesson Plan
             </span>
           </div>
 
@@ -100,7 +106,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center justify-start cursor-pointer w-full mb-6">
-            <BiFile
+            <IoBookSharp
               size={22}
               className={`mr-2 mt-1 ${
                 active === 5 ? "text-[white]" : "text-[#C4C4C4]"
@@ -112,7 +118,7 @@ const Navbar = () => {
               }`}
               onClick={() => setActive(5)}
             >
-              Lesson Plan
+              Classes
             </span>
           </div>
 
@@ -179,7 +185,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center justify-start cursor-pointer w-full mb-6">
-            <IoBookSharp
+            <BiFile
               size={22}
               className={`mr-2 mt-1 ${
                 active === 2 ? "text-[white]" : "text-[#C4C4C4]"
@@ -191,7 +197,7 @@ const Navbar = () => {
               }`}
               onClick={() => setActive(2)}
             >
-              Classes
+              Lesson Plan
             </span>
           </div>
 
@@ -230,7 +236,7 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center justify-start cursor-pointer w-full mb-6">
-            <BiFile
+            <IoBookSharp
               size={22}
               className={`mr-2 mt-1 ${
                 active === 5 ? "text-[white]" : "text-[#C4C4C4]"
@@ -242,7 +248,7 @@ const Navbar = () => {
               }`}
               onClick={() => setActive(5)}
             >
-              Lesson Plan
+              Classes
             </span>
           </div>
 
@@ -287,6 +293,8 @@ const Navbar = () => {
           <Dashboard />
         </div>
       )}
+
+      {active === 2 && <LessonPlan />}
     </>
   );
 };
