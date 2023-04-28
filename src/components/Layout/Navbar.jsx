@@ -7,6 +7,8 @@ import { ImClipboard } from "react-icons/im";
 import { BiFile } from "react-icons/bi";
 import { MdOutlineAssignment } from "react-icons/md";
 import { FaGraduationCap, FaBars } from "react-icons/fa";
+import Dashboard from "../Dashboard/Dashboard";
+
 
 const Navbar = () => {
   const [active, setActive] = useState(1);
@@ -279,6 +281,12 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {active === 1 && (
+        <div>
+          <Dashboard />
+        </div>
+      )}
     </>
   );
 };
