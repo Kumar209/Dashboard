@@ -5,7 +5,7 @@ import StudentPerformance from "./StudentPerformance.jsx";
 
 const DashboardContent = () => {
   return (
-    <div className="mt-10 flex">
+    <div className="z-10 mt-10 md:mx-6 lg:mx-0 lg:flex">
       <div className="flex flex-col mr-2">
         <Attendance />
         <StudentPerformance />

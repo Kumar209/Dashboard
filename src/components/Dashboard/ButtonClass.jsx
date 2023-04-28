@@ -1,6 +1,7 @@
 import React from "react";
 import { BsArrowDownCircleFill } from "react-icons/bs";
 
+// eslint-disable-next-line react/prop-types
 const ButtonClass = ({open, setOpen, active, option1, option2, option3}) => {
 
   return (
@@ -16,7 +17,7 @@ const ButtonClass = ({open, setOpen, active, option1, option2, option3}) => {
       <div
         className={` ${
           open ? "" : "hidden"
-        } z-20 bg-white rounded-lg shadow w-[6rem] dark:bg-gray-700 mt-2`}
+        } absolute z-20 bg-white rounded-lg shadow w-[6rem] dark:bg-gray-700 mt-10`}
       >
         <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
           <li>

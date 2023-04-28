@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import ButtonClass from "./ButtonClass.jsx";
 import { FcShare } from "react-icons/fc";
@@ -7,7 +8,7 @@ const StudyMaterial = () => {
     const [open3, setOpen3] = useState(false);
 
   return (
-    <div className='ml-8 w-[410px] h-[510px] rounded-[15px] shadow-3xl'>
+    <div className='ml-3 mr-2 lg:mr-0 lg:ml-8 lg:w-[410px] h-[510px] rounded-[15px] shadow-3xl'>
         <div className='pl-4 pt-3 font-semibold'>
             <span>Study Material</span>
         </div>
