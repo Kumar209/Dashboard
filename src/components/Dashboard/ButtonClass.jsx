@@ -8,7 +8,7 @@ const ButtonClass = ({open, setOpen, active, option1, option2, option3}) => {
   return (
     <div className="flex flex-col">
       <button
-        className="w-[7rem] h-8 flex items-center justify-center border-slate-500 outline rounded-[10px] font-bold"
+        className="w-[7rem] h-8 flex items-center justify-center border border-slate-500 rounded-[10px] font-medium"
         onClick={() => setOpen(!open)}
       >
         {activeOption}
