@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsArrowDownCircleFill } from "react-icons/bs";
 
 // eslint-disable-next-line react/prop-types
 const ButtonClass = ({open, setOpen, active, option1, option2, option3}) => {
+  const [activeOption, setActiveOption] = useState(active);
 
   return (
     <div className="flex flex-col">
@@ -10,7 +11,7 @@ const ButtonClass = ({open, setOpen, active, option1, option2, option3}) => {
         className="w-[7rem] h-8 flex items-center justify-center border-slate-500 outline rounded-[10px] font-bold"
         onClick={() => setOpen(!open)}
       >
-        {active}
+        {activeOption}
         <BsArrowDownCircleFill size={17} className="ml-[5px]" />
       </button>
 
@@ -20,7 +21,7 @@ const ButtonClass = ({open, setOpen, active, option1, option2, option3}) => {
         } absolute z-20 bg-white rounded-lg shadow w-[6rem] dark:bg-gray-700 mt-10`}
       >
         <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
-          <li>
+          <li onClick={() => setActiveOption(option1) || setOpen(false)}>
             {" "}
             <a
               href="#"
@@ -30,7 +31,7 @@ const ButtonClass = ({open, setOpen, active, option1, option2, option3}) => {
             </a>
           </li>
 
-          <li>
+          <li onClick={() => setActiveOption(option2) || setOpen(false)}>
             {" "}
             <a
               href="#"
@@ -40,7 +41,7 @@ const ButtonClass = ({open, setOpen, active, option1, option2, option3}) => {
             </a>
           </li>
 
-          <li>
+          <li onClick={() => setActiveOption(option3) || setOpen(false)}>
             {" "}
             <a
               href="#"
