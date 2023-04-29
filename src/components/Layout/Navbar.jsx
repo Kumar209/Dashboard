@@ -9,6 +9,12 @@ import { MdOutlineAssignment } from "react-icons/md";
 import { FaGraduationCap, FaBars } from "react-icons/fa";
 import Dashboard from "../Dashboard/Dashboard";
 import LessonPlan from "../Lesson/LessonPlan.jsx";
+// import LessonPlans from "../Lesson/LessonPlans.jsx";
+import Students from "../Students/Students.jsx";
+import Attendence from "../Attendence/Attendence.jsx";
+import Classes from "../Classes/Classes.jsx";
+import Assignments from "../Assignments/Assignments.jsx";
+import Exams from "../Exams/Exams.jsx";
 
 const Navbar = () => {
   const [active, setActive] = useState(1);
@@ -294,7 +300,17 @@ const Navbar = () => {
         </div>
       )}
 
-      {active === 2 && <LessonPlan />}
+      {active === 2 && <LessonPlan /> }
+
+      {active === 3 && <Students />}
+
+      {active === 4 && <Attendence />}
+
+      {active === 5 && <Classes />}
+
+      {active === 6 && <Assignments />}
+
+      {active === 7 && <Exams />}
     </>
   );
 };

@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import ButtonClass from "../Dashboard/ButtonClass";
 import Data from "./LessonTableData.jsx";
+import Tbody from "./Tbody.jsx";
+
+{
+  /* <div className="fixed w-full lg:pl-[21%]"> */
+}
 
 const LessonPlan = () => {
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
 
   return (
-    <div className="fixed w-full lg:pl-[21%]">
+    <div className="w-full lg:pl-[21%]">
       <div className="flex items-center pl-5 pt-3">
         <h1 className="font-bold text-[25px]">Lesson Plan</h1>
       </div>
@@ -42,8 +47,8 @@ const LessonPlan = () => {
         </div>
       </div>
 
-      <div className="w-full h-screen mt-[15px]">
-        <table className="border-collapse border border-slate-400 w-full">
+      <div className="overflow-auto rounded-lg shadow hidden md:block w-full h-screen mt-[15px]">
+        <table className="w-full border-collapse border border-slate-400">
           <thead className="h-[50px] text-white bg-[#071B63]">
             <tr>
               <th className="border border-slate-300">Date</th>
@@ -57,32 +62,41 @@ const LessonPlan = () => {
           </thead>
 
           <tbody>
-            {
-              Data.forEach((data) => {
-                <tr className="h-[50px] text-center">
-                  <td className="border border-slate-300 font-semibold">
-                  {data.Date}
-                  </td>
-                  <td className="border border-slate-300 font-semibold">
-                    {data.Class}
-                  </td>
-                  <td className="border border-slate-300 font-semibold">
-                    {data.Subject}
-                  </td>
-                  <td className="border border-slate-300 font-semibold">
-                    {data.Unit}
-                  </td>
-                  <td className="border border-slate-300 font-semibold">
-                    {data.Topic}
-                  </td>
-                  <td className="border border-slate-300 font-semibold">
-                    {data.Lesson}
-                  </td>
-                  <td className="border border-slate-300 font-semibold">
-                    {data.Approval}
-                  </td>
-                </tr>;
-              })}
+            <Tbody data={Data[0]} />
+            <Tbody data={Data[0]} />
+            <Tbody data={Data[0]} />
+            <Tbody data={Data[0]} />
+            <Tbody data={Data[0]} />
+            <Tbody data={Data[0]} />
+            <Tbody data={Data[0]} />
+            <Tbody data={Data[0]} />
+          </tbody>
+        </table>
+      </div>
+
+      <div className="overflow-auto  md:hidden mt-[15px]">
+        <table className="w-full border-collapse border border-slate-400">
+          <thead className="h-[50px] text-white bg-[#071B63]">
+            <tr>
+              <th className="border border-slate-300">Date</th>
+              <th className="border border-slate-300">Class</th>
+              <th className="border border-slate-300">Subject</th>
+              <th className="border border-slate-300">Unit</th>
+              <th className="border border-slate-300">Topic</th>
+              <th className="border border-slate-300">Lesson No.</th>
+              <th className="border border-slate-300">Approval Date</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <Tbody data={Data[0]} />
+            <Tbody data={Data[0]} />
+            <Tbody data={Data[0]} />
+            <Tbody data={Data[0]} />
+            <Tbody data={Data[0]} />
+            <Tbody data={Data[0]} />
+            <Tbody data={Data[0]} />
+            <Tbody data={Data[0]} />
           </tbody>
         </table>
       </div>
