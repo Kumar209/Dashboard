@@ -45,6 +45,7 @@ const StudentPerformance = () => {
       <div className="pt-7 px-5">
         <Student name="Prashant Kumar" marks="45%" />
         <Student name="Janu" marks="0%" />
+        <Student name="Xavier" marks="50%" />
       </div>
 
       <div className="flex justify-end pr-5 mb-5">
