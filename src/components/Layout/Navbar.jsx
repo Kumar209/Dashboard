@@ -54,7 +54,7 @@ const Navbar = () => {
               className={`font-semibold text-xl pr-10 ${
                 active === 1 ? "text-[white]" : "text-[#C4C4C4]"
               }`}
-              onClick={() => setActive(1)}
+              onClick={() => setActive(1) || setOpen(!open)}
             >
               Dashboard
             </span>
@@ -71,7 +71,7 @@ const Navbar = () => {
               className={`font-semibold text-xl pr-10 ${
                 active === 2 ? "text-[white]" : "text-[#C4C4C4]"
               }`}
-              onClick={() => setActive(2)}
+              onClick={() => setActive(2) || setOpen(!open)}
             >
               Lesson Plan
             </span>
@@ -88,7 +88,7 @@ const Navbar = () => {
               className={`font-semibold text-xl pr-10 ${
                 active === 3 ? "text-[white]" : "text-[#C4C4C4]"
               }`}
-              onClick={() => setActive(3)}
+              onClick={() => setActive(3) || setOpen(!open)}
             >
               All Students
             </span>
@@ -105,7 +105,7 @@ const Navbar = () => {
               className={`font-semibold text-xl pr-10 ${
                 active === 4 ? "text-[white]" : "text-[#C4C4C4]"
               }`}
-              onClick={() => setActive(4)}
+              onClick={() => setActive(4) || setOpen(!open)}
             >
               Attendence
             </span>
@@ -122,7 +122,7 @@ const Navbar = () => {
               className={`font-semibold text-xl pr-10 ${
                 active === 5 ? "text-[white]" : "text-[#C4C4C4]"
               }`}
-              onClick={() => setActive(5)}
+              onClick={() => setActive(5) || setOpen(!open)}
             >
               Classes
             </span>
@@ -139,7 +139,7 @@ const Navbar = () => {
               className={`font-semibold text-xl pr-10 ${
                 active === 6 ? "text-[white]" : "text-[#C4C4C4]"
               }`}
-              onClick={() => setActive(6)}
+              onClick={() => setActive(6) || setOpen(!open)}
             >
               Assignments
             </span>
@@ -156,7 +156,7 @@ const Navbar = () => {
               className={`font-semibold text-xl pr-10 ${
                 active === 7 ? "text-[white]" : "text-[#C4C4C4]"
               }`}
-              onClick={() => setActive(7)}
+              onClick={() => setActive(7) || setOpen(!open)}
             >
               Exams
             </span>
